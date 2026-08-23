@@ -591,6 +591,20 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;font-family:Ari
   margin:0 !important;
 }
 
+
+/* ONLY WEBSITE PROMO */
+.promo{
+  top:835px !important;
+  left:560px !important;
+  right:560px !important;
+  display:block !important;
+}
+.promo .line3{
+  width:100% !important;
+  min-height:82px !important;
+  height:82px !important;
+}
+
 </style>
 </head>
 <body>
@@ -650,18 +664,6 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;font-family:Ari
     </div>
 
     <div class="promo">
-      <div class="line1">
-        CODUL&nbsp;<span class="green-highlight">KIP</span>&nbsp;PE&nbsp;
-        <span class="green-highlight">GTA5.RO/SHOP</span>&nbsp;PENTRU&nbsp;
-        <span class="green-highlight">5% BONUS</span>
-      </div>
-
-      <div class="line2">
-        <span class="green-highlight">REFERRAL 13</span>&nbsp;PE B-ZONE ROLEPLAY,
-        <span class="green-highlight">MAȘINĂ</span>&nbsp;+&nbsp;
-        <span class="green-highlight">GEANTĂ</span>&nbsp;LA ÎNCEPUT
-      </div>
-
       <div class="line3">
         <a href="https://kip-zone.info/">https://kip-zone.info/</a>
       </div>
@@ -696,9 +698,10 @@ for(let i=0;i<76;i++){
   scene.appendChild(p);
 }
 
-const floatTexts=["KIP","CODUL KIP","REFERRAL 13","5% BONUS"];
+const floatTexts=[];
 let floatCount=0;
 function spawnFloat(){
+  if(floatTexts.length===0) return;
   if(floatCount>4) return;
   if(Math.random()<.55) return;
   floatCount++;
@@ -718,8 +721,8 @@ function spawnFloat(){
 }
 setInterval(spawnFloat,1250);
 
-/* Countdown 2:00, pornește automat la încărcarea scenei */
-const total=180;
+/* Countdown 3:30, pornește automat la încărcarea scenei */
+const total=210;
 let left=total;
 const timer=document.getElementById("timer");
 const progress=document.getElementById("progressBar");
